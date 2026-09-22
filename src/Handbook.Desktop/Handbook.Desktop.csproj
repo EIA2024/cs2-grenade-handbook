@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>道具手册</AssemblyName><RootNamespace>Handbook.Desktop</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Handbook.Desktop.Program</StartupObject>
+    <Version>1.1.1</Version>
+    <!-- WPF owns DPI initialization; WinForms is used only for NotifyIcon. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../Handbook.Core/Handbook.Core.csproj" /><ProjectReference Include="../Handbook.Storage/Handbook.Storage.csproj" /></ItemGroup>
+  <ItemGroup><Using Remove="System.Windows.Forms" /><Using Remove="System.Drawing" /><Using Include="System.IO" /></ItemGroup>
+</Project>
+
+

@@ -1,0 +1,15 @@
+.tools/
+.vs/
+*.user
+*.suo
+
+bin/
+obj/
+**/bin/
+**/obj/
+
+artifacts/
+测试结果/
+资料库/
+用户数据/
+图片包/
